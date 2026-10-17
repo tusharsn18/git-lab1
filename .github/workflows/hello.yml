@@ -1,0 +1,17 @@
+
+name: Lab 1 GitHub Actions
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show success message
+        run: echo "Lab 1 GitHub Actions is working!"
